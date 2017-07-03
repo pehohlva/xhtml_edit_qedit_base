@@ -1,0 +1,40 @@
+<RCC>
+    <qresource prefix="/" >
+        <file>img/copy.png</file>
+        <file>img/cut.png</file>
+        <file>img/document.png</file>
+        <file>img/editredo.png</file>
+        <file>img/editundo.png</file>
+        <file>img/error.png</file>
+        <file>img/exportpdf.png</file>
+        <file>img/fileprint.png</file>
+        <file>img/filesave.png</file>
+        <file>img/html_div.png</file>
+        <file>img/icon.png</file>
+        <file>img/info.png</file>
+        <file>img/link.png</file>
+        <file>img/listen.png</file>
+        <file>img/new.png</file>
+        <file>img/oggetto.png</file>
+        <file>img/open.png</file>
+        <file>img/paste.png</file>
+        <file>img/pictures.png</file>
+        <file>img/row_table.png</file>
+        <file>img/save.png</file>
+        <file>img/table.png</file>
+        <file>img/textbold.png</file>
+        <file>img/textcenter.png</file>
+        <file>img/textitalic.png</file>
+        <file>img/textjustify.png</file>
+        <file>img/textleft.png</file>
+        <file>img/textright.png</file>
+        <file>img/textunder.png</file>
+        <file>img/tip.html</file>
+        <file>img/unordered-list.png</file>
+        <file>img/view-source.png</file>
+        <file>img/zoom-in.gif</file>
+        <file>img/zoom-out.gif</file>
+        <file>img/zoomin.png</file>
+        <file>img/zoomout.png</file>
+    </qresource>
+</RCC>

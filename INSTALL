@@ -1,0 +1,9 @@
+
+if you have qt version 4.2 > 
+
+
+cd dir root application source..
+
+qmake htmledit.pro  && make
+
+run on window / linux ubuntu  mac osx Tiger universal or >

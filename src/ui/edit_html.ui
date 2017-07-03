@@ -1,0 +1,953 @@
+<ui version="4.0" >
+ <class>Edit_html</class>
+ <widget class="QWidget" name="Edit_html" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>622</width>
+    <height>485</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" >
+   <property name="leftMargin" >
+    <number>9</number>
+   </property>
+   <property name="topMargin" >
+    <number>9</number>
+   </property>
+   <property name="rightMargin" >
+    <number>9</number>
+   </property>
+   <property name="bottomMargin" >
+    <number>9</number>
+   </property>
+   <property name="horizontalSpacing" >
+    <number>6</number>
+   </property>
+   <property name="verticalSpacing" >
+    <number>6</number>
+   </property>
+   <item row="2" column="0" >
+    <widget class="QTabWidget" name="tabWidget" >
+     <property name="currentIndex" >
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab" >
+      <attribute name="title" >
+       <string>Edit and View</string>
+      </attribute>
+      <attribute name="icon" >
+       <iconset resource="../attach.qrc" >:/img/icon.png</iconset>
+      </attribute>
+      <layout class="QGridLayout" >
+       <property name="leftMargin" >
+        <number>9</number>
+       </property>
+       <property name="topMargin" >
+        <number>9</number>
+       </property>
+       <property name="rightMargin" >
+        <number>9</number>
+       </property>
+       <property name="bottomMargin" >
+        <number>9</number>
+       </property>
+       <property name="horizontalSpacing" >
+        <number>6</number>
+       </property>
+       <property name="verticalSpacing" >
+        <number>6</number>
+       </property>
+       <item row="0" column="0" >
+        <widget class="QVimedit" name="wtext" >
+         <property name="acceptDrops" >
+          <bool>false</bool>
+         </property>
+         <property name="readOnly" >
+          <bool>false</bool>
+         </property>
+         <property name="openExternalLinks" >
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2" >
+      <attribute name="title" >
+       <string>Source View</string>
+      </attribute>
+      <attribute name="icon" >
+       <iconset resource="../attach.qrc" >:/img/view-source.png</iconset>
+      </attribute>
+      <layout class="QGridLayout" >
+       <property name="leftMargin" >
+        <number>9</number>
+       </property>
+       <property name="topMargin" >
+        <number>9</number>
+       </property>
+       <property name="rightMargin" >
+        <number>9</number>
+       </property>
+       <property name="bottomMargin" >
+        <number>9</number>
+       </property>
+       <property name="horizontalSpacing" >
+        <number>6</number>
+       </property>
+       <property name="verticalSpacing" >
+        <number>6</number>
+       </property>
+       <item row="0" column="0" >
+        <layout class="QHBoxLayout" >
+         <property name="spacing" >
+          <number>6</number>
+         </property>
+         <property name="leftMargin" >
+          <number>0</number>
+         </property>
+         <property name="topMargin" >
+          <number>0</number>
+         </property>
+         <property name="rightMargin" >
+          <number>0</number>
+         </property>
+         <property name="bottomMargin" >
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QTextEdit" name="sline" >
+           <property name="sizePolicy" >
+            <sizepolicy vsizetype="Expanding" hsizetype="Expanding" >
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize" >
+            <size>
+             <width>75</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize" >
+            <size>
+             <width>75</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="palette" >
+            <palette>
+             <active>
+              <colorrole role="Light" >
+               <brush brushstyle="SolidPattern" >
+                <color alpha="255" >
+                 <red>208</red>
+                 <green>208</green>
+                 <blue>208</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="BrightText" >
+               <brush brushstyle="SolidPattern" >
+                <color alpha="255" >
+                 <red>0</red>
+                 <green>0</green>
+                 <blue>0</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="Base" >
+               <brush brushstyle="SolidPattern" >
+                <color alpha="255" >
+                 <red>223</red>
+                 <green>223</green>
+                 <blue>223</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="HighlightedText" >
+               <brush brushstyle="SolidPattern" >
+                <color alpha="255" >
+                 <red>0</red>
+                 <green>0</green>
+                 <blue>0</blue>
+                </color>
+               </brush>
+              </colorrole>
+             </active>
+             <inactive>
+              <colorrole role="Light" >
+               <brush brushstyle="SolidPattern" >
+                <color alpha="255" >
+                 <red>208</red>
+                 <green>208</green>
+                 <blue>208</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="BrightText" >
+               <brush brushstyle="SolidPattern" >
+                <color alpha="255" >
+                 <red>0</red>
+                 <green>0</green>
+                 <blue>0</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="Base" >
+               <brush brushstyle="SolidPattern" >
+                <color alpha="255" >
+                 <red>223</red>
+                 <green>223</green>
+                 <blue>223</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="HighlightedText" >
+               <brush brushstyle="SolidPattern" >
+                <color alpha="255" >
+                 <red>0</red>
+                 <green>0</green>
+                 <blue>0</blue>
+                </color>
+               </brush>
+              </colorrole>
+             </inactive>
+             <disabled>
+              <colorrole role="Light" >
+               <brush brushstyle="SolidPattern" >
+                <color alpha="255" >
+                 <red>208</red>
+                 <green>208</green>
+                 <blue>208</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="BrightText" >
+               <brush brushstyle="SolidPattern" >
+                <color alpha="255" >
+                 <red>0</red>
+                 <green>0</green>
+                 <blue>0</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="Base" >
+               <brush brushstyle="SolidPattern" >
+                <color alpha="255" >
+                 <red>235</red>
+                 <green>233</green>
+                 <blue>237</blue>
+                </color>
+               </brush>
+              </colorrole>
+              <colorrole role="HighlightedText" >
+               <brush brushstyle="SolidPattern" >
+                <color alpha="255" >
+                 <red>0</red>
+                 <green>0</green>
+                 <blue>0</blue>
+                </color>
+               </brush>
+              </colorrole>
+             </disabled>
+            </palette>
+           </property>
+           <property name="cursor" stdset="0" >
+            <cursorShape>ForbiddenCursor</cursorShape>
+           </property>
+           <property name="frameShadow" >
+            <enum>QFrame::Raised</enum>
+           </property>
+           <property name="readOnly" >
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTextEdit" name="stext" >
+           <property name="autoFormatting" >
+            <set>QTextEdit::AutoAll</set>
+           </property>
+           <property name="acceptRichText" >
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item row="1" column="0" >
+    <layout class="QHBoxLayout" >
+     <property name="spacing" >
+      <number>6</number>
+     </property>
+     <property name="leftMargin" >
+      <number>0</number>
+     </property>
+     <property name="topMargin" >
+      <number>0</number>
+     </property>
+     <property name="rightMargin" >
+      <number>0</number>
+     </property>
+     <property name="bottomMargin" >
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QComboBox" name="list_ul" >
+       <item>
+        <property name="text" >
+         <string>New Item</string>
+        </property>
+        <property name="icon" >
+         <iconset resource="../attach.qrc" >:/img/unordered-list.png</iconset>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFontComboBox" name="fontname" />
+     </item>
+     <item>
+      <widget class="QComboBox" name="fontsize" >
+       <item>
+        <property name="text" >
+         <string>12</string>
+        </property>
+       </item>
+       <item>
+        <property name="text" >
+         <string>15</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="vol_color" >
+       <property name="toolTip" >
+        <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Font color&lt;/p>&lt;/body>&lt;/html></string>
+       </property>
+       <property name="whatsThis" >
+        <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">Font color&lt;/p>&lt;/body>&lt;/html></string>
+       </property>
+       <property name="text" >
+        <string>...</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="../attach.qrc" >:/img/info.png</iconset>
+       </property>
+       <property name="iconSize" >
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="vol_br" >
+       <property name="toolTip" >
+        <string>Break Line</string>
+       </property>
+       <property name="statusTip" >
+        <string>Break Line</string>
+       </property>
+       <property name="whatsThis" >
+        <string>Break Line</string>
+       </property>
+       <property name="text" >
+        <string>...</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="../attach.qrc" >:/img/document.png</iconset>
+       </property>
+       <property name="iconSize" >
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="vol_img" >
+       <property name="toolTip" >
+        <string>New Image</string>
+       </property>
+       <property name="statusTip" >
+        <string>New Image</string>
+       </property>
+       <property name="whatsThis" >
+        <string>New Image</string>
+       </property>
+       <property name="text" >
+        <string>...</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="../attach.qrc" >:/img/pictures.png</iconset>
+       </property>
+       <property name="iconSize" >
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="val_table" >
+       <property name="toolTip" >
+        <string>New Table</string>
+       </property>
+       <property name="statusTip" >
+        <string>New Table</string>
+       </property>
+       <property name="whatsThis" >
+        <string>New Table</string>
+       </property>
+       <property name="text" >
+        <string>...</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="../attach.qrc" >:/img/table.png</iconset>
+       </property>
+       <property name="iconSize" >
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="savecache" >
+       <property name="text" >
+        <string>Save HTML </string>
+       </property>
+       <property name="icon" >
+        <iconset resource="../attach.qrc" >:/img/filesave.png</iconset>
+       </property>
+       <property name="iconSize" >
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+       <property name="shortcut" >
+        <string>Ctrl+F</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation" >
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" >
+        <size>
+         <width>141</width>
+         <height>23</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="0" >
+    <layout class="QHBoxLayout" >
+     <property name="spacing" >
+      <number>6</number>
+     </property>
+     <property name="leftMargin" >
+      <number>0</number>
+     </property>
+     <property name="topMargin" >
+      <number>0</number>
+     </property>
+     <property name="rightMargin" >
+      <number>0</number>
+     </property>
+     <property name="bottomMargin" >
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QToolButton" name="vol_print" >
+       <property name="toolTip" >
+        <string>Print File</string>
+       </property>
+       <property name="statusTip" >
+        <string>Print File</string>
+       </property>
+       <property name="whatsThis" >
+        <string>Print File</string>
+       </property>
+       <property name="text" >
+        <string>...</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="../attach.qrc" >:/img/fileprint.png</iconset>
+       </property>
+       <property name="iconSize" >
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="vol_pdf" >
+       <property name="toolTip" >
+        <string>Export as PDF</string>
+       </property>
+       <property name="statusTip" >
+        <string>Export as PDF</string>
+       </property>
+       <property name="whatsThis" >
+        <string>Export as PDF</string>
+       </property>
+       <property name="text" >
+        <string>...</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="../attach.qrc" >:/img/exportpdf.png</iconset>
+       </property>
+       <property name="iconSize" >
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="vol_html" >
+       <property name="toolTip" >
+        <string>Export as html</string>
+       </property>
+       <property name="statusTip" >
+        <string>Export as html</string>
+       </property>
+       <property name="whatsThis" >
+        <string>Export as html</string>
+       </property>
+       <property name="text" >
+        <string>...</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="../attach.qrc" >:/img/filesave.png</iconset>
+       </property>
+       <property name="iconSize" >
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="vol_undo" >
+       <property name="toolTip" >
+        <string>Undo</string>
+       </property>
+       <property name="statusTip" >
+        <string>Undo</string>
+       </property>
+       <property name="whatsThis" >
+        <string>Undo</string>
+       </property>
+       <property name="text" >
+        <string>...</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="../attach.qrc" >:/img/editundo.png</iconset>
+       </property>
+       <property name="iconSize" >
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="vol_redo" >
+       <property name="toolTip" >
+        <string>Redo</string>
+       </property>
+       <property name="statusTip" >
+        <string>Redo</string>
+       </property>
+       <property name="whatsThis" >
+        <string>Redo</string>
+       </property>
+       <property name="text" >
+        <string>...</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="../attach.qrc" >:/img/editredo.png</iconset>
+       </property>
+       <property name="iconSize" >
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="vol_cut" >
+       <property name="toolTip" >
+        <string>Cut</string>
+       </property>
+       <property name="statusTip" >
+        <string>Cut</string>
+       </property>
+       <property name="whatsThis" >
+        <string>Cut</string>
+       </property>
+       <property name="text" >
+        <string>...</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="../attach.qrc" >:/img/cut.png</iconset>
+       </property>
+       <property name="iconSize" >
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="vol_copy" >
+       <property name="toolTip" >
+        <string>Copy</string>
+       </property>
+       <property name="statusTip" >
+        <string>Copy</string>
+       </property>
+       <property name="whatsThis" >
+        <string>Copy</string>
+       </property>
+       <property name="text" >
+        <string>...</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="../attach.qrc" >:/img/copy.png</iconset>
+       </property>
+       <property name="iconSize" >
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="mypaste" >
+       <property name="toolTip" >
+        <string>Paste</string>
+       </property>
+       <property name="statusTip" >
+        <string>Paste</string>
+       </property>
+       <property name="whatsThis" >
+        <string>Paste</string>
+       </property>
+       <property name="text" >
+        <string>...</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="../attach.qrc" >:/img/paste.png</iconset>
+       </property>
+       <property name="iconSize" >
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="vol_link" >
+       <property name="toolTip" >
+        <string>Link</string>
+       </property>
+       <property name="statusTip" >
+        <string>Link</string>
+       </property>
+       <property name="whatsThis" >
+        <string>Link</string>
+       </property>
+       <property name="text" >
+        <string>...</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="../attach.qrc" >:/img/link.png</iconset>
+       </property>
+       <property name="iconSize" >
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="vol_bold" >
+       <property name="toolTip" >
+        <string>Bold</string>
+       </property>
+       <property name="statusTip" >
+        <string>Bold</string>
+       </property>
+       <property name="whatsThis" >
+        <string>Bold</string>
+       </property>
+       <property name="text" >
+        <string>...</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="../attach.qrc" >:/img/textbold.png</iconset>
+       </property>
+       <property name="iconSize" >
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+       <property name="checkable" >
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="vol_italic" >
+       <property name="toolTip" >
+        <string>Italic</string>
+       </property>
+       <property name="statusTip" >
+        <string>Italic</string>
+       </property>
+       <property name="whatsThis" >
+        <string>Italic</string>
+       </property>
+       <property name="text" >
+        <string>...</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="../attach.qrc" >:/img/textitalic.png</iconset>
+       </property>
+       <property name="iconSize" >
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+       <property name="checkable" >
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="vol_underline" >
+       <property name="toolTip" >
+        <string>Underline</string>
+       </property>
+       <property name="statusTip" >
+        <string>Underline</string>
+       </property>
+       <property name="whatsThis" >
+        <string>Underline</string>
+       </property>
+       <property name="text" >
+        <string>...</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="../attach.qrc" >:/img/textunder.png</iconset>
+       </property>
+       <property name="iconSize" >
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+       <property name="checkable" >
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="vol_left" >
+       <property name="toolTip" >
+        <string>Text align Left</string>
+       </property>
+       <property name="statusTip" >
+        <string>Text align Left</string>
+       </property>
+       <property name="whatsThis" >
+        <string>Text align Left</string>
+       </property>
+       <property name="text" >
+        <string>...</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="../attach.qrc" >:/img/textleft.png</iconset>
+       </property>
+       <property name="iconSize" >
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="vol_center" >
+       <property name="toolTip" >
+        <string>Text align Center</string>
+       </property>
+       <property name="statusTip" >
+        <string>Text align Center</string>
+       </property>
+       <property name="whatsThis" >
+        <string>Text align Center</string>
+       </property>
+       <property name="text" >
+        <string>...</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="../attach.qrc" >:/img/textcenter.png</iconset>
+       </property>
+       <property name="iconSize" >
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="vol_right" >
+       <property name="toolTip" >
+        <string>Text align Center</string>
+       </property>
+       <property name="statusTip" >
+        <string>Text align Center</string>
+       </property>
+       <property name="whatsThis" >
+        <string>Text align Center</string>
+       </property>
+       <property name="text" >
+        <string>...</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="../attach.qrc" >:/img/textright.png</iconset>
+       </property>
+       <property name="iconSize" >
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="vol_justify" >
+       <property name="toolTip" >
+        <string>Text align Justify</string>
+       </property>
+       <property name="statusTip" >
+        <string>Text align Justify</string>
+       </property>
+       <property name="whatsThis" >
+        <string>Text align Justify</string>
+       </property>
+       <property name="text" >
+        <string>...</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="../attach.qrc" >:/img/textjustify.png</iconset>
+       </property>
+       <property name="iconSize" >
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="vol_source" >
+       <property name="toolTip" >
+        <string>Source View</string>
+       </property>
+       <property name="statusTip" >
+        <string>Source View</string>
+       </property>
+       <property name="whatsThis" >
+        <string>Source View</string>
+       </property>
+       <property name="text" >
+        <string>...</string>
+       </property>
+       <property name="icon" >
+        <iconset resource="../attach.qrc" >:/img/view-source.png</iconset>
+       </property>
+       <property name="iconSize" >
+        <size>
+         <width>22</width>
+         <height>22</height>
+        </size>
+       </property>
+       <property name="checkable" >
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation" >
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" >
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QVimedit</class>
+   <extends>QTextBrowser</extends>
+   <header>qvimedit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../attach.qrc" />
+ </resources>
+ <connections/>
+</ui>
