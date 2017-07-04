@@ -13,7 +13,7 @@ RCC_DIR	= build/.rcc
 OBJECTS_DIR = build/.obj
 UI_DIR	= ui
 
-CONFIG   += qt warn_on debug
+CONFIG   += qt warn_off debug console
 ######################win32:debug { CONFIG += console }
 
 QT += xml
@@ -23,7 +23,7 @@ QT += sql
 win32:RC_FILE = win.rc
 macx:RC_FILE = VolumeIcon.icns
 macx:QMAKE_MAC_SDK=/Developer/SDKs/MacOSX10.4u.sdk
-macx:CONFIG+=x86 ppc
+macx:CONFIG+=x86
 
 
 INCLUDEPATH += ../libhtml
@@ -46,7 +46,8 @@ HEADERS += base_edit.h \
            baseui.h \
            ui_edit_html.h \
            ui_table_setting.h \
-           xmlhighlighter.h
+           xmlhighlighter.h \
+           app_config.h
 FORMS += ui/edit_html.ui
 SOURCES += base_edit.cpp \
            edit_html.cpp \

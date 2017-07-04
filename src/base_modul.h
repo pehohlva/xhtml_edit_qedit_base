@@ -1,5 +1,6 @@
 #ifndef BASE_MODUL_H
 #define BASE_MODUL_H
+#include <QtCore>
 #include <QFile>
 #include <QtCore> 
 #include <QTextCodec>
@@ -80,20 +81,19 @@
 #include <QFile>
 #include <QBuffer>
 #include <QMenuBar>
-//// new one
-#include <QShortcut>
-
-#include "main.h"
-
-
-#include <QtCore>
-#include "tidy.h" 
 #include <QMainWindow>
 #include <QApplication>
 #include <QtGui>
 #include <QtCore>
 #include <QtDebug>
 #include <QTextBrowser>
+#include <QShortcut>
+#include <QStatusBar>
+#include <QProgressBar>
+#include "main.h"
+#include "app_config.h"
+#include "tidy.h" 
+
 
 
 static QString bytesToSize(const qint64 size) {
@@ -137,7 +137,7 @@ void Init( QString dircache )
       TMP_Dir = dircache; 
     }
     QDateTime timer1( QDateTime::currentDateTime() ); 
-    uint timert =  timer1.toTime_t();
+    const uint timert =  timer1.toTime_t();
     
     TMP_Config = QString( "%1tidy.conf" ).arg( TMP_Dir );
     setcurrentcodec = QTextCodec::codecForMib(106);  /* utf8 */ 

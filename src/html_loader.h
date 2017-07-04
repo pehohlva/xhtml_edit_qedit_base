@@ -5,8 +5,9 @@
 
 #include <QtNetwork>
 #include <QUrl>
+#include "app_config.h"
 
-#define WEBAGENTNAME "Google"
+
 
 
 typedef QMap<int, QStringList> Loadurl;

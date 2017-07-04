@@ -1,8 +1,40 @@
 #include "base_edit.h"
 //
-/*  Save file as base_edit.cpp  */
-/*  incomming class name Base_Edit */
+// mainwindow append here & base edit ... init to reorder file 4.7.2017
 //
+
+
+void MainWindow::setBaselightTxt(const QString &txt) {
+
+    QObject* obj = sender();
+    const QString namefrom = obj->objectName();
+    qDebug() << "### " << __FILE__ << "-" << __FUNCTION__  << "line:" << __LINE__;
+    qDebug() << "### sender from  " << namefrom;
+    statusLabel->setText(txt);
+}
+
+MainWindow::~MainWindow() {
+    this->deleteLater();
+}
+
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent)
+{
+    qDebug() << "### " << __FILE__ << "-" << __FUNCTION__  << "line:" << __LINE__;
+    // create objects for the label and progress bar
+    statusLabel = new QLabel(this);
+    statusProgressBar = new QProgressBar(this);
+    // set text for the label
+    statusLabel->setText("Il Callo di strada...");
+    // make progress bar text invisible
+    statusProgressBar->setTextVisible(false);
+    this->setStatusBar(new QStatusBar(this) );
+    /// statusBar()
+    // add the two controls to the status bar
+    statusBar()->addPermanentWidget(statusLabel);
+    statusBar()->addPermanentWidget(statusProgressBar,1);
+}
+
 
 
 Base_Edit::Base_Edit()
@@ -38,13 +70,13 @@ Base_Edit::Base_Edit()
     connect(vol_br, SIGNAL(clicked(bool)), this, SLOT(MakeBreak()));
      connect(wtext, SIGNAL(IncommingHTML()), this, SLOT(Reload_Editor()));   /* paste html extern ....*/
      
-     connect(wtext, SIGNAL(SaveStreamer()), this, SLOT(SaveX()));
-     connect(stext, SIGNAL(SaveStreamer()), this, SLOT(SaveX()));
+     //// connect(wtext, SIGNAL(SaveStreamer()), this, SLOT(SaveX()));
+     //// connect(stext, SIGNAL(SaveStreamer()), this, SLOT(SaveX()));
      
     connect(wtext, SIGNAL(TakeImage(QString)), this, SLOT(PicsFromCopy(QString)));
     
-    ///////shortcut1 = new QShortcut(QKeySequence(tr("Ctrl+S", "&Save current")),this);
-     ////////connect(shortcut1, SIGNAL(activated()),savecache, SLOT(click()));  
+    QShortcut *sxp1 = new QShortcut(QKeySequence(tr("Ctrl+S", "&Save current")),this);
+         connect(sxp1, SIGNAL(activated()),savecache, SLOT(click()));
     
     setAcceptDrops(true);
     html = "";
@@ -62,8 +94,10 @@ Base_Edit::Base_Edit()
 
 void Base_Edit::AutoReload()
 {
-  emit statusMessage(QString("Auto self function clean: %1").arg(UmanTimeFromUnix(QTime_Null())));
-    QTimer::singleShot(5000, this, SLOT(AutoReload())); 
+
+     qDebug() << "### " << __FILE__ << "-" << __FUNCTION__  << "line:" << __LINE__;
+     ////  emit statusMessage(QString("Check html: %1").arg(UmanTimeFromUnix(QTime_Null())));
+    /////  QTimer::singleShot(5000, this, SLOT(AutoReload()));
 }
 
 
@@ -83,7 +117,6 @@ void Base_Edit::SaveStream()
     QApplication::restoreOverrideCursor();
     
     emit OnSave(goextern);
-    //////QMessageBox::warning(0, tr("Edit xhtml"),tr("Saved..."));
 
 }
 
@@ -551,19 +584,21 @@ void Base_Edit::CleanCache()
     }
 }
 
-void Base_Edit::PicsFromCopy( QString filenew ) 
+void Base_Edit::PicsFromCopy( const QString filenew )
 {
+    qDebug() << "### " << __FILE__ << "-" << __FUNCTION__  << "line:" << __LINE__;
     imageincommingcache = filenew;
-    QTimer::singleShot(2000, this, SLOT(CleanCache()));   /* wait to write ready image on disk cache */
-    //////////////qDebug() << "### entra PicsFromCopy " << filenew;
+    ///// QTimer::singleShot(2000, this, SLOT(CleanCache()));   /* wait to write ready image on disk cache */
+    qDebug() << "### entra PicsFromCopy " << filenew;
            Create_New_Image_Tag(filenew);
-           Reload_Editor(); 
+    Reload_Editor();
     
      
 }
 
 void Base_Edit::Grabdata(const QMimeData *data)
 {
+  qDebug() << "### " << __FILE__ << "-" << __FUNCTION__  << "line:" << __LINE__;
   if (!data) {
     return;
   }
@@ -675,17 +710,18 @@ void Base_Edit::Reload_Editor()
 
 void  Base_Edit::Create_New_Image_Tag( const QString urlremoteorlocal )
 {
+   qDebug() << "### " << __FILE__ << "-" << __FUNCTION__  << "line:" << __LINE__;
    if (image_extension(urlremoteorlocal)) {
        QString subtext = QString("<p><img src=\"%1\" />").arg(urlremoteorlocal);
-               ///////////subtext.append("<br/><br/>Description on image.</p>");
        QTextDocumentFragment fragment = QTextDocumentFragment::fromHtml(subtext);
        wtext->textCursor().insertFragment(fragment);
-       emit statusMessage(QString("Image new :").arg(urlremoteorlocal));
+       emit statusMessage(QString("Image new : %1").arg(urlremoteorlocal));
    }
 }
 
 void  Base_Edit::Image_mod_Setting()
 {
+    qDebug() << "### " << __FILE__ << "-" << __FUNCTION__  << "line:" << __LINE__;
     /* QTextImageFormat nowimage;  */
     if (nowimage.isValid()) {
                 Interface::self( this )->SetFormat(nowimage);
@@ -709,7 +745,7 @@ void  Base_Edit::Image_mod_Setting()
 
 void  Base_Edit::CreateanewImage()
 {
-  
+  qDebug() << "### " << __FILE__ << "-" << __FUNCTION__  << "line:" << __LINE__;
 QString fileimg = QFileDialog::getOpenFileName( this, tr( "Choose Image" ), QString(setter.value("LastDir").toString()) ,tr("Image Files supported (*)"));
     
     if ( fileimg.isEmpty() ) {
@@ -749,6 +785,8 @@ QString fileimg = QFileDialog::getOpenFileName( this, tr( "Choose Image" ), QStr
 /* insert table   */
 void  Base_Edit::CreateanewTable()
 {
+
+   qDebug() << "### " << __FILE__ << "-" << __FUNCTION__  << "line:" << __LINE__;
     QString subtext, collx, rowx;
     bool ok;
     int colonne = QInputDialog::getInt(this, tr("New Table cool"),tr("Cool:"), 3, 1, 10, 1, &ok);
@@ -775,6 +813,7 @@ void  Base_Edit::CreateanewTable()
 
 void  Base_Edit::TableSetting()
 {
+  qDebug() << "### " << __FILE__ << "-" << __FUNCTION__  << "line:" << __LINE__;
     QTextCursor findercursor(wtext->textCursor());
     Etable = findercursor.currentTable();
     if (Etable) {

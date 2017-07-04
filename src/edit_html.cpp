@@ -96,6 +96,7 @@ void  Edit_html::SaveAction( QString source  )
 void  Edit_html::SaveAsFile()
 {
     
+      qDebug() << "### " << __FILE__ << "-" << __FUNCTION__  << "line:" << __LINE__;
       Refresh_Source();
       SaveAction(html);
       bool tclean;
@@ -351,10 +352,16 @@ void Edit_html::MakefilePrintPdf()
         setter.setValue("LastDir",ultimacartellaaperta);   
         printer.setOutputFileName(fileName);
         wtext->document()->print(&printer);
+        emit statusMessage(QString("Pdf: %1").arg(fileName));
         /////////////QMessageBox::information( this, tr( "File info." ),tr("Il file ? stato salvato"));
             if (is_file(fileName)) {
                 QApplication::restoreOverrideCursor();
-                OpenDesktop(QUrl(fileName));
+                //// file://
+                const QString trafile = fileName.prepend("file://");
+                bool r = QDesktopServices::openUrl(QUrl(trafile));
+               if (!r) {
+               QMessageBox::warning(this, tr("Error"),tr("Unable to open file or dir %1").arg(trafile));
+               }
             }
     }
     QApplication::restoreOverrideCursor();

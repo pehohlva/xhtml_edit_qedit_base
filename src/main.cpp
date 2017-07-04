@@ -9,7 +9,9 @@
 #include "main.h"
 #include "edit_html.h"
 #include "base_modul.h"
+#include "app_config.h"
 
+/// nuova config di git sali
 
 static inline bool fwriteutf8(QString fullFileName,QString xml)
 {
@@ -34,7 +36,6 @@ static inline bool fwriteutf8(QString fullFileName,QString xml)
         }
         return false;
 }
-
 
 
 
@@ -124,7 +125,7 @@ localedirfile = QString("%1/locale/edit_%2.qm").arg(WORK_CACHEDIR).arg(UserLangu
     QTranslator translator;
     translator.load(localedirfile);
     a.installTranslator(&translator);
-    
+    qDebug() << "### " << __FILE__ << "-" << __FUNCTION__  << "line:" << __LINE__;
     qDebug() << "### primo arg  " << argv[1] << " secondo arg " << argv[2];
     
     QStringList debi;
@@ -139,7 +140,7 @@ localedirfile = QString("%1/locale/edit_%2.qm").arg(WORK_CACHEDIR).arg(UserLangu
     debi.append(QString(".. _PROGRAM_TITLE_: %1").arg(_PROGRAM_TITLE_));
     
      
-    QMainWindow mainWin;
+    MainWindow mainWin;
     mainWin.setWindowTitle(_PROGRAM_TITLE_);
     
     Edit_html w;
@@ -147,9 +148,7 @@ localedirfile = QString("%1/locale/edit_%2.qm").arg(WORK_CACHEDIR).arg(UserLangu
      
      
     QMenu *menu = mainWin.menuBar()->addMenu(QObject::tr("&File"));
-    menu->addAction(QObject::tr("Open File"), &w, SLOT(OpenNewDoc()));
-    menu->addSeparator();
-    menu->addAction(QObject::tr("&Quit"), &a, SLOT(quit()));
+    menu->addAction(QObject::tr("Apri File xhtml - html"), &w, SLOT(OpenNewDoc()));
     
     w.set_Cache(IMM_BUILD);
     QString im, argument;
@@ -185,17 +184,25 @@ localedirfile = QString("%1/locale/edit_%2.qm").arg(WORK_CACHEDIR).arg(UserLangu
     
     w.SetFileBase(defaultfile);
 	
-    
-    //// QObject::connect(&w, SIGNAL(statusMessage(QString)),  mainWin.statusBar(), SLOT(showMessage(QString)));
-    ///////fwriteutf8(DEBUGFILE,debi.join("\n"));
+    QRect screens = QApplication::desktop()->availableGeometry();
+
+    const int largox = screens.width() / 10 * 9;
+    const int altox = screens.height() / 10 * 8;
     mainWin.show();
-     a.connect( &a, SIGNAL( lastWindowClosed() ), &a, SLOT( quit() ) );
-     //// a.connect(&w, SIGNAL(statusMessage(QString)),  mainWin.statusBar(), SLOT(showMessage(QString)));
+    mainWin.setMinimumSize(largox,altox);
+    mainWin.setMaximumSize(largox,altox);
+    QRect r = mainWin.geometry();
+    r.moveCenter(QApplication::desktop()->availableGeometry().center());
+    mainWin.setGeometry(r);
+
+
+   mainWin.connect(&w, SIGNAL(statusMessage(QString)),&mainWin, SLOT(setBaselightTxt(QString)));
+   mainWin.connect( &a, SIGNAL( lastWindowClosed() ), &a, SLOT( quit() ) );
     return a.exec();
 }
 
 
 
 
-
+///  #include "main.moc"
 

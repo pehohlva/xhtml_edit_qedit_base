@@ -380,6 +380,8 @@ connect(spinBox_2, SIGNAL(valueChanged(int)), this, SLOT(misurecambiaL()));
 
 void Interface::keyPressEvent(QKeyEvent *e)
 {
+    qDebug() << "### " << __FILE__ << "-" << __FUNCTION__  << "line:" << __LINE__;
+
     if (e->key() == Qt::Key_Control && TagliaPoi.width() > 0 )
     {    
     moverecci = true; 
@@ -458,9 +460,9 @@ void Interface::keyPressEvent(QKeyEvent *e)
 }
 void Interface::keyReleaseEvent(QKeyEvent *e)
 {
-   setCursor(Qt::ArrowCursor);
-moverecci = false; 
-CTRL_Pressed = false;
+        setCursor(Qt::ArrowCursor);
+        moverecci = false;
+        CTRL_Pressed = false;
 }
 
 

@@ -1,5 +1,8 @@
 #include "qvimedit.h"
 #include <QDesktopWidget>
+#include "app_config.h"
+
+
 //
 /*  Save file as qvimedit.cpp  */
 /*  incomming class name QVimedit */
@@ -9,7 +12,7 @@
 QVimedit::QVimedit( QWidget* parent )
  : QTextBrowser(parent)
 {
-	 numerobase = 0;
+     numerobase = 0;
      shortcut0 = new QShortcut(QKeySequence(tr("Ctrl+W", "Print Screen")),this);
      connect(shortcut0, SIGNAL(activated()),this, SLOT(MakePrintScreen()));
      shortcut1 = new QShortcut(QKeySequence("F2"),this);
@@ -55,6 +58,7 @@ void QVimedit::MakePrintScreen()
 
 bool QVimedit::canInsertFromMimeData ( const QMimeData * source )
 {
+    qDebug() << "### " << __FILE__ << "-" << __FUNCTION__  << "line:" << __LINE__;
     return QTextEdit::canInsertFromMimeData(source);
 }
 
@@ -66,7 +70,7 @@ void QVimedit::keyPressEvent(QKeyEvent *e)
 
 void QVimedit::mouseDoubleClickEvent ( QMouseEvent *e )
 {
-    ///////qDebug() << "### mouseDoubleClickEvent ";
+    qDebug() << "### mouseDoubleClickEvent ";
     emit DDClick();
     QTextEdit::mouseDoubleClickEvent(e);
 }
@@ -75,21 +79,29 @@ void QVimedit::mouseDoubleClickEvent ( QMouseEvent *e )
     
 void QVimedit::insertFromMimeData ( const QMimeData * source )
 {
-    
-    //////////qDebug() << "### insertFromMimeData 2  ";
-    
+    qDebug() << "### " << __FILE__ << "-" << __FUNCTION__  << "line:" << __LINE__;
     if ( source->hasImage() ) {
          numerobase++;
-         const  QString nuovaim = QString("%2/image_%1.png").arg(numerobase).arg(QDir::homePath());
+         QDateTime timer1( QDateTime::currentDateTime() );
+         const qint64 secsince70 = timer1.currentMSecsSinceEpoch();
+         QString pathx = IMM_BUILD;
+         pathx.append("im_");
+         pathx.append(QString("%1").arg(secsince70));
+         pathx.append("_mime_");
+         pathx.append(QString("%1.png").arg(numerobase));
+         const  QString nuovaim = pathx;
+
+         qDebug() << "### nuovaim... " << nuovaim;
+
          QImage images = qvariant_cast<QImage>(source->imageData());
          bool salvato = images.save(nuovaim,"PNG",100);
-         //////////////////qDebug() << "### salvato 1/0  " << salvato;
-          emit TakeImage(nuovaim);   /* and remove nuovaim  */
+          if (salvato) {
+          emit TakeImage(nuovaim);
+          }
          return;
         
     }
 
-    ////////////////QTextEdit::insertFromMimeData(source);
     if ( source->formats().contains("text/html") ) {
         ////////qDebug() << "### incomming paste text/html  ";
         const  QString tidicaches = QString("%2/.qtidy/").arg(QDir::homePath());

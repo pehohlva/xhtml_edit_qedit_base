@@ -3,7 +3,7 @@
 //
 #include "ui_edit_html.h"
 #include "base_modul.h"
-
+#include "app_config.h"
 //////////////#include "main.h"
 #include "interface.h"
 
@@ -18,6 +18,38 @@
 /*  incomming class name Base_Edit */
 //
 #include <QPointer>
+
+
+
+class MainWindow : public QMainWindow {
+    Q_OBJECT public: explicit MainWindow(QWidget *parent = 0);
+    ~MainWindow();
+    //// private slots:
+    //// void on_actionMyMenuAction_triggered();
+     //// private: Ui::MainWindow *ui; // add references to Label and ProgressBar
+    QLabel *statusLabel;
+    QProgressBar *statusProgressBar;
+public slots:
+    /// void execute();
+    void setBaselightTxt(const QString &txt);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //
 class Base_Edit : public QWidget, public Ui::Edit_html, public Base_Modul
 {
@@ -94,7 +126,7 @@ public slots:
     void Reload_Editor();
     void CreateanewImage();
     void Image_mod_Setting();
-    void PicsFromCopy( QString filenew );
+    void PicsFromCopy(const QString filenew );
     void RamPosition_wysiwyg( int position );
     void RamPosition_source( int position );
     void ModusView( bool src );
