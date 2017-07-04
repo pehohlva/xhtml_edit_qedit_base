@@ -187,7 +187,7 @@ localedirfile = QString("%1/locale/edit_%2.qm").arg(WORK_CACHEDIR).arg(UserLangu
     QRect screens = QApplication::desktop()->availableGeometry();
 
     const int largox = screens.width() / 10 * 9;
-    const int altox = screens.height() / 10 * 8;
+    const int altox = screens.height() / 10 * 9;
     mainWin.show();
     mainWin.setMinimumSize(largox,altox);
     mainWin.setMaximumSize(largox,altox);

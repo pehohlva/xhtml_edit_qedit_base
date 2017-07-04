@@ -13,7 +13,7 @@ RCC_DIR	= build/.rcc
 OBJECTS_DIR = build/.obj
 UI_DIR	= ui
 
-CONFIG   += qt warn_off debug console
+CONFIG   += qt warn_off debug
 ######################win32:debug { CONFIG += console }
 
 QT += xml
