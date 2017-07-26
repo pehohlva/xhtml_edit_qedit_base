@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'edit_html.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.0
+** Created by: Qt User Interface Compiler version 5.5.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -391,233 +391,231 @@ public:
 
     void retranslateUi(QWidget *Edit_html)
     {
-        Edit_html->setWindowTitle(QApplication::translate("Edit_html", "Form", Q_NULLPTR));
-        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("Edit_html", "Edit and View", Q_NULLPTR));
-        tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("Edit_html", "Source View", Q_NULLPTR));
-        list_ul->setItemText(0, QApplication::translate("Edit_html", "New Item", Q_NULLPTR));
+        Edit_html->setWindowTitle(QApplication::translate("Edit_html", "Form", 0));
+        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("Edit_html", "Edit and View", 0));
+        tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("Edit_html", "Source View", 0));
+        list_ul->setItemText(0, QApplication::translate("Edit_html", "New Item", 0));
 
         fontsize->clear();
         fontsize->insertItems(0, QStringList()
-         << QApplication::translate("Edit_html", "12", Q_NULLPTR)
-         << QApplication::translate("Edit_html", "15", Q_NULLPTR)
+         << QApplication::translate("Edit_html", "12", 0)
+         << QApplication::translate("Edit_html", "15", 0)
         );
 #ifndef QT_NO_TOOLTIP
         vol_color->setToolTip(QApplication::translate("Edit_html", "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Font color</p></body></html>", Q_NULLPTR));
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Font color</p></body></html>", 0));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_WHATSTHIS
         vol_color->setWhatsThis(QApplication::translate("Edit_html", "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal; text-decoration:none;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\">Font color</p></body></html>", Q_NULLPTR));
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\">Font color</p></body></html>", 0));
 #endif // QT_NO_WHATSTHIS
-        vol_color->setText(QApplication::translate("Edit_html", "...", Q_NULLPTR));
+        vol_color->setText(QApplication::translate("Edit_html", "...", 0));
 #ifndef QT_NO_TOOLTIP
-        vol_br->setToolTip(QApplication::translate("Edit_html", "Break Line", Q_NULLPTR));
+        vol_br->setToolTip(QApplication::translate("Edit_html", "Break Line", 0));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_STATUSTIP
-        vol_br->setStatusTip(QApplication::translate("Edit_html", "Break Line", Q_NULLPTR));
+        vol_br->setStatusTip(QApplication::translate("Edit_html", "Break Line", 0));
 #endif // QT_NO_STATUSTIP
 #ifndef QT_NO_WHATSTHIS
-        vol_br->setWhatsThis(QApplication::translate("Edit_html", "Break Line", Q_NULLPTR));
+        vol_br->setWhatsThis(QApplication::translate("Edit_html", "Break Line", 0));
 #endif // QT_NO_WHATSTHIS
-        vol_br->setText(QApplication::translate("Edit_html", "...", Q_NULLPTR));
+        vol_br->setText(QApplication::translate("Edit_html", "...", 0));
 #ifndef QT_NO_TOOLTIP
-        vol_img->setToolTip(QApplication::translate("Edit_html", "New Image", Q_NULLPTR));
+        vol_img->setToolTip(QApplication::translate("Edit_html", "New Image", 0));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_STATUSTIP
-        vol_img->setStatusTip(QApplication::translate("Edit_html", "New Image", Q_NULLPTR));
+        vol_img->setStatusTip(QApplication::translate("Edit_html", "New Image", 0));
 #endif // QT_NO_STATUSTIP
 #ifndef QT_NO_WHATSTHIS
-        vol_img->setWhatsThis(QApplication::translate("Edit_html", "New Image", Q_NULLPTR));
+        vol_img->setWhatsThis(QApplication::translate("Edit_html", "New Image", 0));
 #endif // QT_NO_WHATSTHIS
-        vol_img->setText(QApplication::translate("Edit_html", "...", Q_NULLPTR));
+        vol_img->setText(QApplication::translate("Edit_html", "...", 0));
 #ifndef QT_NO_TOOLTIP
-        val_table->setToolTip(QApplication::translate("Edit_html", "New Table", Q_NULLPTR));
+        val_table->setToolTip(QApplication::translate("Edit_html", "New Table", 0));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_STATUSTIP
-        val_table->setStatusTip(QApplication::translate("Edit_html", "New Table", Q_NULLPTR));
+        val_table->setStatusTip(QApplication::translate("Edit_html", "New Table", 0));
 #endif // QT_NO_STATUSTIP
 #ifndef QT_NO_WHATSTHIS
-        val_table->setWhatsThis(QApplication::translate("Edit_html", "New Table", Q_NULLPTR));
+        val_table->setWhatsThis(QApplication::translate("Edit_html", "New Table", 0));
 #endif // QT_NO_WHATSTHIS
-        val_table->setText(QApplication::translate("Edit_html", "...", Q_NULLPTR));
-        savecache->setText(QApplication::translate("Edit_html", "Save HTML ", Q_NULLPTR));
-#ifndef QT_NO_SHORTCUT
-        savecache->setShortcut(QApplication::translate("Edit_html", "Ctrl+F", Q_NULLPTR));
-#endif // QT_NO_SHORTCUT
+        val_table->setText(QApplication::translate("Edit_html", "...", 0));
+        savecache->setText(QApplication::translate("Edit_html", "Save HTML ", 0));
+        savecache->setShortcut(QApplication::translate("Edit_html", "Ctrl+F", 0));
 #ifndef QT_NO_TOOLTIP
-        vol_print->setToolTip(QApplication::translate("Edit_html", "Print File", Q_NULLPTR));
+        vol_print->setToolTip(QApplication::translate("Edit_html", "Print File", 0));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_STATUSTIP
-        vol_print->setStatusTip(QApplication::translate("Edit_html", "Print File", Q_NULLPTR));
+        vol_print->setStatusTip(QApplication::translate("Edit_html", "Print File", 0));
 #endif // QT_NO_STATUSTIP
 #ifndef QT_NO_WHATSTHIS
-        vol_print->setWhatsThis(QApplication::translate("Edit_html", "Print File", Q_NULLPTR));
+        vol_print->setWhatsThis(QApplication::translate("Edit_html", "Print File", 0));
 #endif // QT_NO_WHATSTHIS
-        vol_print->setText(QApplication::translate("Edit_html", "...", Q_NULLPTR));
+        vol_print->setText(QApplication::translate("Edit_html", "...", 0));
 #ifndef QT_NO_TOOLTIP
-        vol_pdf->setToolTip(QApplication::translate("Edit_html", "Export as PDF", Q_NULLPTR));
+        vol_pdf->setToolTip(QApplication::translate("Edit_html", "Export as PDF", 0));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_STATUSTIP
-        vol_pdf->setStatusTip(QApplication::translate("Edit_html", "Export as PDF", Q_NULLPTR));
+        vol_pdf->setStatusTip(QApplication::translate("Edit_html", "Export as PDF", 0));
 #endif // QT_NO_STATUSTIP
 #ifndef QT_NO_WHATSTHIS
-        vol_pdf->setWhatsThis(QApplication::translate("Edit_html", "Export as PDF", Q_NULLPTR));
+        vol_pdf->setWhatsThis(QApplication::translate("Edit_html", "Export as PDF", 0));
 #endif // QT_NO_WHATSTHIS
-        vol_pdf->setText(QApplication::translate("Edit_html", "...", Q_NULLPTR));
+        vol_pdf->setText(QApplication::translate("Edit_html", "...", 0));
 #ifndef QT_NO_TOOLTIP
-        vol_html->setToolTip(QApplication::translate("Edit_html", "Export as html", Q_NULLPTR));
+        vol_html->setToolTip(QApplication::translate("Edit_html", "Export as html", 0));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_STATUSTIP
-        vol_html->setStatusTip(QApplication::translate("Edit_html", "Export as html", Q_NULLPTR));
+        vol_html->setStatusTip(QApplication::translate("Edit_html", "Export as html", 0));
 #endif // QT_NO_STATUSTIP
 #ifndef QT_NO_WHATSTHIS
-        vol_html->setWhatsThis(QApplication::translate("Edit_html", "Export as html", Q_NULLPTR));
+        vol_html->setWhatsThis(QApplication::translate("Edit_html", "Export as html", 0));
 #endif // QT_NO_WHATSTHIS
-        vol_html->setText(QApplication::translate("Edit_html", "...", Q_NULLPTR));
+        vol_html->setText(QApplication::translate("Edit_html", "...", 0));
 #ifndef QT_NO_TOOLTIP
-        vol_undo->setToolTip(QApplication::translate("Edit_html", "Undo", Q_NULLPTR));
+        vol_undo->setToolTip(QApplication::translate("Edit_html", "Undo", 0));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_STATUSTIP
-        vol_undo->setStatusTip(QApplication::translate("Edit_html", "Undo", Q_NULLPTR));
+        vol_undo->setStatusTip(QApplication::translate("Edit_html", "Undo", 0));
 #endif // QT_NO_STATUSTIP
 #ifndef QT_NO_WHATSTHIS
-        vol_undo->setWhatsThis(QApplication::translate("Edit_html", "Undo", Q_NULLPTR));
+        vol_undo->setWhatsThis(QApplication::translate("Edit_html", "Undo", 0));
 #endif // QT_NO_WHATSTHIS
-        vol_undo->setText(QApplication::translate("Edit_html", "...", Q_NULLPTR));
+        vol_undo->setText(QApplication::translate("Edit_html", "...", 0));
 #ifndef QT_NO_TOOLTIP
-        vol_redo->setToolTip(QApplication::translate("Edit_html", "Redo", Q_NULLPTR));
+        vol_redo->setToolTip(QApplication::translate("Edit_html", "Redo", 0));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_STATUSTIP
-        vol_redo->setStatusTip(QApplication::translate("Edit_html", "Redo", Q_NULLPTR));
+        vol_redo->setStatusTip(QApplication::translate("Edit_html", "Redo", 0));
 #endif // QT_NO_STATUSTIP
 #ifndef QT_NO_WHATSTHIS
-        vol_redo->setWhatsThis(QApplication::translate("Edit_html", "Redo", Q_NULLPTR));
+        vol_redo->setWhatsThis(QApplication::translate("Edit_html", "Redo", 0));
 #endif // QT_NO_WHATSTHIS
-        vol_redo->setText(QApplication::translate("Edit_html", "...", Q_NULLPTR));
+        vol_redo->setText(QApplication::translate("Edit_html", "...", 0));
 #ifndef QT_NO_TOOLTIP
-        vol_cut->setToolTip(QApplication::translate("Edit_html", "Cut", Q_NULLPTR));
+        vol_cut->setToolTip(QApplication::translate("Edit_html", "Cut", 0));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_STATUSTIP
-        vol_cut->setStatusTip(QApplication::translate("Edit_html", "Cut", Q_NULLPTR));
+        vol_cut->setStatusTip(QApplication::translate("Edit_html", "Cut", 0));
 #endif // QT_NO_STATUSTIP
 #ifndef QT_NO_WHATSTHIS
-        vol_cut->setWhatsThis(QApplication::translate("Edit_html", "Cut", Q_NULLPTR));
+        vol_cut->setWhatsThis(QApplication::translate("Edit_html", "Cut", 0));
 #endif // QT_NO_WHATSTHIS
-        vol_cut->setText(QApplication::translate("Edit_html", "...", Q_NULLPTR));
+        vol_cut->setText(QApplication::translate("Edit_html", "...", 0));
 #ifndef QT_NO_TOOLTIP
-        vol_copy->setToolTip(QApplication::translate("Edit_html", "Copy", Q_NULLPTR));
+        vol_copy->setToolTip(QApplication::translate("Edit_html", "Copy", 0));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_STATUSTIP
-        vol_copy->setStatusTip(QApplication::translate("Edit_html", "Copy", Q_NULLPTR));
+        vol_copy->setStatusTip(QApplication::translate("Edit_html", "Copy", 0));
 #endif // QT_NO_STATUSTIP
 #ifndef QT_NO_WHATSTHIS
-        vol_copy->setWhatsThis(QApplication::translate("Edit_html", "Copy", Q_NULLPTR));
+        vol_copy->setWhatsThis(QApplication::translate("Edit_html", "Copy", 0));
 #endif // QT_NO_WHATSTHIS
-        vol_copy->setText(QApplication::translate("Edit_html", "...", Q_NULLPTR));
+        vol_copy->setText(QApplication::translate("Edit_html", "...", 0));
 #ifndef QT_NO_TOOLTIP
-        mypaste->setToolTip(QApplication::translate("Edit_html", "Paste", Q_NULLPTR));
+        mypaste->setToolTip(QApplication::translate("Edit_html", "Paste", 0));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_STATUSTIP
-        mypaste->setStatusTip(QApplication::translate("Edit_html", "Paste", Q_NULLPTR));
+        mypaste->setStatusTip(QApplication::translate("Edit_html", "Paste", 0));
 #endif // QT_NO_STATUSTIP
 #ifndef QT_NO_WHATSTHIS
-        mypaste->setWhatsThis(QApplication::translate("Edit_html", "Paste", Q_NULLPTR));
+        mypaste->setWhatsThis(QApplication::translate("Edit_html", "Paste", 0));
 #endif // QT_NO_WHATSTHIS
-        mypaste->setText(QApplication::translate("Edit_html", "...", Q_NULLPTR));
+        mypaste->setText(QApplication::translate("Edit_html", "...", 0));
 #ifndef QT_NO_TOOLTIP
-        vol_link->setToolTip(QApplication::translate("Edit_html", "Link", Q_NULLPTR));
+        vol_link->setToolTip(QApplication::translate("Edit_html", "Link", 0));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_STATUSTIP
-        vol_link->setStatusTip(QApplication::translate("Edit_html", "Link", Q_NULLPTR));
+        vol_link->setStatusTip(QApplication::translate("Edit_html", "Link", 0));
 #endif // QT_NO_STATUSTIP
 #ifndef QT_NO_WHATSTHIS
-        vol_link->setWhatsThis(QApplication::translate("Edit_html", "Link", Q_NULLPTR));
+        vol_link->setWhatsThis(QApplication::translate("Edit_html", "Link", 0));
 #endif // QT_NO_WHATSTHIS
-        vol_link->setText(QApplication::translate("Edit_html", "...", Q_NULLPTR));
+        vol_link->setText(QApplication::translate("Edit_html", "...", 0));
 #ifndef QT_NO_TOOLTIP
-        vol_bold->setToolTip(QApplication::translate("Edit_html", "Bold", Q_NULLPTR));
+        vol_bold->setToolTip(QApplication::translate("Edit_html", "Bold", 0));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_STATUSTIP
-        vol_bold->setStatusTip(QApplication::translate("Edit_html", "Bold", Q_NULLPTR));
+        vol_bold->setStatusTip(QApplication::translate("Edit_html", "Bold", 0));
 #endif // QT_NO_STATUSTIP
 #ifndef QT_NO_WHATSTHIS
-        vol_bold->setWhatsThis(QApplication::translate("Edit_html", "Bold", Q_NULLPTR));
+        vol_bold->setWhatsThis(QApplication::translate("Edit_html", "Bold", 0));
 #endif // QT_NO_WHATSTHIS
-        vol_bold->setText(QApplication::translate("Edit_html", "...", Q_NULLPTR));
+        vol_bold->setText(QApplication::translate("Edit_html", "...", 0));
 #ifndef QT_NO_TOOLTIP
-        vol_italic->setToolTip(QApplication::translate("Edit_html", "Italic", Q_NULLPTR));
+        vol_italic->setToolTip(QApplication::translate("Edit_html", "Italic", 0));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_STATUSTIP
-        vol_italic->setStatusTip(QApplication::translate("Edit_html", "Italic", Q_NULLPTR));
+        vol_italic->setStatusTip(QApplication::translate("Edit_html", "Italic", 0));
 #endif // QT_NO_STATUSTIP
 #ifndef QT_NO_WHATSTHIS
-        vol_italic->setWhatsThis(QApplication::translate("Edit_html", "Italic", Q_NULLPTR));
+        vol_italic->setWhatsThis(QApplication::translate("Edit_html", "Italic", 0));
 #endif // QT_NO_WHATSTHIS
-        vol_italic->setText(QApplication::translate("Edit_html", "...", Q_NULLPTR));
+        vol_italic->setText(QApplication::translate("Edit_html", "...", 0));
 #ifndef QT_NO_TOOLTIP
-        vol_underline->setToolTip(QApplication::translate("Edit_html", "Underline", Q_NULLPTR));
+        vol_underline->setToolTip(QApplication::translate("Edit_html", "Underline", 0));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_STATUSTIP
-        vol_underline->setStatusTip(QApplication::translate("Edit_html", "Underline", Q_NULLPTR));
+        vol_underline->setStatusTip(QApplication::translate("Edit_html", "Underline", 0));
 #endif // QT_NO_STATUSTIP
 #ifndef QT_NO_WHATSTHIS
-        vol_underline->setWhatsThis(QApplication::translate("Edit_html", "Underline", Q_NULLPTR));
+        vol_underline->setWhatsThis(QApplication::translate("Edit_html", "Underline", 0));
 #endif // QT_NO_WHATSTHIS
-        vol_underline->setText(QApplication::translate("Edit_html", "...", Q_NULLPTR));
+        vol_underline->setText(QApplication::translate("Edit_html", "...", 0));
 #ifndef QT_NO_TOOLTIP
-        vol_left->setToolTip(QApplication::translate("Edit_html", "Text align Left", Q_NULLPTR));
+        vol_left->setToolTip(QApplication::translate("Edit_html", "Text align Left", 0));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_STATUSTIP
-        vol_left->setStatusTip(QApplication::translate("Edit_html", "Text align Left", Q_NULLPTR));
+        vol_left->setStatusTip(QApplication::translate("Edit_html", "Text align Left", 0));
 #endif // QT_NO_STATUSTIP
 #ifndef QT_NO_WHATSTHIS
-        vol_left->setWhatsThis(QApplication::translate("Edit_html", "Text align Left", Q_NULLPTR));
+        vol_left->setWhatsThis(QApplication::translate("Edit_html", "Text align Left", 0));
 #endif // QT_NO_WHATSTHIS
-        vol_left->setText(QApplication::translate("Edit_html", "...", Q_NULLPTR));
+        vol_left->setText(QApplication::translate("Edit_html", "...", 0));
 #ifndef QT_NO_TOOLTIP
-        vol_center->setToolTip(QApplication::translate("Edit_html", "Text align Center", Q_NULLPTR));
+        vol_center->setToolTip(QApplication::translate("Edit_html", "Text align Center", 0));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_STATUSTIP
-        vol_center->setStatusTip(QApplication::translate("Edit_html", "Text align Center", Q_NULLPTR));
+        vol_center->setStatusTip(QApplication::translate("Edit_html", "Text align Center", 0));
 #endif // QT_NO_STATUSTIP
 #ifndef QT_NO_WHATSTHIS
-        vol_center->setWhatsThis(QApplication::translate("Edit_html", "Text align Center", Q_NULLPTR));
+        vol_center->setWhatsThis(QApplication::translate("Edit_html", "Text align Center", 0));
 #endif // QT_NO_WHATSTHIS
-        vol_center->setText(QApplication::translate("Edit_html", "...", Q_NULLPTR));
+        vol_center->setText(QApplication::translate("Edit_html", "...", 0));
 #ifndef QT_NO_TOOLTIP
-        vol_right->setToolTip(QApplication::translate("Edit_html", "Text align Center", Q_NULLPTR));
+        vol_right->setToolTip(QApplication::translate("Edit_html", "Text align Center", 0));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_STATUSTIP
-        vol_right->setStatusTip(QApplication::translate("Edit_html", "Text align Center", Q_NULLPTR));
+        vol_right->setStatusTip(QApplication::translate("Edit_html", "Text align Center", 0));
 #endif // QT_NO_STATUSTIP
 #ifndef QT_NO_WHATSTHIS
-        vol_right->setWhatsThis(QApplication::translate("Edit_html", "Text align Center", Q_NULLPTR));
+        vol_right->setWhatsThis(QApplication::translate("Edit_html", "Text align Center", 0));
 #endif // QT_NO_WHATSTHIS
-        vol_right->setText(QApplication::translate("Edit_html", "...", Q_NULLPTR));
+        vol_right->setText(QApplication::translate("Edit_html", "...", 0));
 #ifndef QT_NO_TOOLTIP
-        vol_justify->setToolTip(QApplication::translate("Edit_html", "Text align Justify", Q_NULLPTR));
+        vol_justify->setToolTip(QApplication::translate("Edit_html", "Text align Justify", 0));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_STATUSTIP
-        vol_justify->setStatusTip(QApplication::translate("Edit_html", "Text align Justify", Q_NULLPTR));
+        vol_justify->setStatusTip(QApplication::translate("Edit_html", "Text align Justify", 0));
 #endif // QT_NO_STATUSTIP
 #ifndef QT_NO_WHATSTHIS
-        vol_justify->setWhatsThis(QApplication::translate("Edit_html", "Text align Justify", Q_NULLPTR));
+        vol_justify->setWhatsThis(QApplication::translate("Edit_html", "Text align Justify", 0));
 #endif // QT_NO_WHATSTHIS
-        vol_justify->setText(QApplication::translate("Edit_html", "...", Q_NULLPTR));
+        vol_justify->setText(QApplication::translate("Edit_html", "...", 0));
 #ifndef QT_NO_TOOLTIP
-        vol_source->setToolTip(QApplication::translate("Edit_html", "Source View", Q_NULLPTR));
+        vol_source->setToolTip(QApplication::translate("Edit_html", "Source View", 0));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_STATUSTIP
-        vol_source->setStatusTip(QApplication::translate("Edit_html", "Source View", Q_NULLPTR));
+        vol_source->setStatusTip(QApplication::translate("Edit_html", "Source View", 0));
 #endif // QT_NO_STATUSTIP
 #ifndef QT_NO_WHATSTHIS
-        vol_source->setWhatsThis(QApplication::translate("Edit_html", "Source View", Q_NULLPTR));
+        vol_source->setWhatsThis(QApplication::translate("Edit_html", "Source View", 0));
 #endif // QT_NO_WHATSTHIS
-        vol_source->setText(QApplication::translate("Edit_html", "...", Q_NULLPTR));
+        vol_source->setText(QApplication::translate("Edit_html", "...", 0));
     } // retranslateUi
 
 };

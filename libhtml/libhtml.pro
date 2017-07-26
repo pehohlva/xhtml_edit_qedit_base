@@ -11,14 +11,11 @@ LANGUAGE	= C++
 DEFINES += NDEBUG THREAD_SAFE=1 TEMP_STORE=2
 
 DESTDIR	= ../all_os_libs/
-win32:TARGET	= tidy
-unix:TARGET	= tidy
-macx:TARGET	= tidy
+TARGET	= tidy
 
 QT += xml
-
-macx:QMAKE_MAC_SDK=/Developer/SDKs/MacOSX10.4u.sdk
-macx:CONFIG+=x86 ppc
+CONFIG += c++11 release QMAKE_CXXFLAGS_WARN_ON=-w QMAKE_CFLAGS_WARN_ON=-w
+LIBS += -lz
 
 
 # Input

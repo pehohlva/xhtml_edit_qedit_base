@@ -13,7 +13,7 @@ RCC_DIR	= build/.rcc
 OBJECTS_DIR = build/.obj
 UI_DIR	= ui
 
-CONFIG   += qt warn_off debug
+CONFIG   += qt warn_off release
 ######################win32:debug { CONFIG += console }
 
 QT += xml
@@ -22,8 +22,6 @@ QT += sql
 
 win32:RC_FILE = win.rc
 macx:RC_FILE = VolumeIcon.icns
-macx:QMAKE_MAC_SDK=/Developer/SDKs/MacOSX10.4u.sdk
-macx:CONFIG+=x86
 
 
 INCLUDEPATH += ../libhtml
