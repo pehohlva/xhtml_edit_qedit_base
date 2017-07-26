@@ -11,7 +11,7 @@
 #define _PROGRAM_OWNER_ QString("version 3.9.1")
 #define _PROGRAM_TITLE_ QString("XHTML Editor version 3.9")
 #define Q_WORKS_PEND QString("open")
-#define _PROGRAM_SHORT_NAME QString("xhtmledit")
+#define _PROGRAM_SHORT_NAME QString("xhtmledit39")
 #define _WATERMARK_ QString("www.pulitzer.ch")
 #define TUMNAIL_SIZE 120
 #define PICS_SIZE_LIMIT 740

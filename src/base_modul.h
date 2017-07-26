@@ -87,13 +87,13 @@
 #include <QtCore>
 #include <QtDebug>
 #include <QTextBrowser>
-#include <QShortcut>
 #include <QStatusBar>
 #include <QProgressBar>
 #include "main.h"
 #include "app_config.h"
 #include "tidy.h" 
-
+#include <QShortcut>
+#include <QKeySequence>
 
 
 static QString bytesToSize(const qint64 size) {

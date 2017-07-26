@@ -3,6 +3,7 @@
 
 
 #include "base_modul.h"
+#include <QShortcut>
 
 typedef QMap<QString, QString> Appsetting; 
 typedef QMap<int, QStringList> resultMap;

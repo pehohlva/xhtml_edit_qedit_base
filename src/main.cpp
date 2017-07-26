@@ -10,6 +10,9 @@
 #include "edit_html.h"
 #include "base_modul.h"
 #include "app_config.h"
+#include <QKeySequence>
+#include <QShortcut>
+
 
 /// nuova config di git sali
 
@@ -84,7 +87,7 @@ int main(int argc, char *argv[]) {
         QCoreApplication::setOrganizationDomain(_PROGRAM_NAME_DOMAINE_);
         QCoreApplication::setApplicationName(_PROGRAM_NAME_);
 
-#if defined Q_WS_MAC
+#if defined Q_OS_MAC
 QStringList path;
 path.append(QApplication::applicationDirPath());
 QDir dir(QApplication::applicationDirPath());
@@ -110,7 +113,7 @@ QDir::setCurrent(dir.absolutePath());   /* here down -> Frameworks */
     */
     
     
-#if defined Q_WS_MAC
+#if defined Q_OS_MAC
 localedirfile = QString("%1/locale/edit_%2.qm").arg(QDir::currentPath()).arg(UserLanguage()); 
 #endif
 #if defined Q_WS_WIN
@@ -134,28 +137,43 @@ localedirfile = QString("%1/locale/edit_%2.qm").arg(WORK_CACHEDIR).arg(UserLangu
      debi.append(QString("libraryPaths file: %1").arg(path));
      }
     debi.append(QString(".. WORK_CACHEDIR file: %1").arg(WORK_CACHEDIR));
-    
-    
-      
     debi.append(QString(".. _PROGRAM_TITLE_: %1").arg(_PROGRAM_TITLE_));
     
      
     MainWindow mainWin;
-    mainWin.setWindowTitle(_PROGRAM_TITLE_);
+    QString titlenow = _PROGRAM_TITLE_;
+    titlenow.append(" - ");
+    titlenow.append(QDate::currentDate().toString());
+    mainWin.setWindowTitle(titlenow);
     
     Edit_html w;
     mainWin.setCentralWidget(&w);
+
+
+
+    #if defined Q_OS_MAC
+
+    /* mac icon menu tray icon mac...  */
+      QMenu *macdocks = new QMenu();  //// menu by mac bar icons
+      macdocks->addAction(QObject::tr("&App Quit."),&a, SLOT(quit()));
+      macdocks->addAction(QObject::tr("&Open xhtml - html file"),&w, SLOT(OpenNewDoc()));
+      macdocks->addSeparator();
+      //// qt_mac_set_dock_menu(macdocks);
+      macdocks->setAsDockMenu();
+    #endif
      
      
     QMenu *menu = mainWin.menuBar()->addMenu(QObject::tr("&File"));
     menu->addAction(QObject::tr("Apri File xhtml - html"), &w, SLOT(OpenNewDoc()));
+    menu->addSeparator();
+    menu->addAction(QObject::tr("&App Quit."),&a, SLOT(quit()));
     
     w.set_Cache(IMM_BUILD);
     QString im, argument;
     QString defaultfile = QString("%2/index.xhtml").arg(QDir::homePath());
     debi.append(QString("defaultfile file: %1").arg(defaultfile));
     if (!is_file(defaultfile))  {
-    fwriteutf8(defaultfile,"<p>Hello World!</p>");  
+    fwriteutf8(defaultfile,"<p>Hello World! open or write your html or xhtml file.... </p>");
     }
     
     argument = argv[1];

@@ -75,8 +75,12 @@ Base_Edit::Base_Edit()
      
     connect(wtext, SIGNAL(TakeImage(QString)), this, SLOT(PicsFromCopy(QString)));
     
-    QShortcut *sxp1 = new QShortcut(QKeySequence(tr("Ctrl+S", "&Save current")),this);
-         connect(sxp1, SIGNAL(activated()),savecache, SLOT(click()));
+    QShortcut *sxp1 = new QShortcut(this);
+          sxp1->setKey(QKeySequence::Save);
+          connect(sxp1, SIGNAL(activated()),this, SLOT(SaveStream()));
+    QShortcut *shortopen = new QShortcut(this);
+          shortopen->setKey(QKeySequence::Open);
+          connect(shortopen, SIGNAL(activated()),this, SLOT(OpenNewDoc()));
     
     setAcceptDrops(true);
     html = "";
@@ -109,10 +113,11 @@ void Base_Edit::SaveX()
 
 void Base_Edit::SaveStream()
 {
-    emit statusMessage("Save file ....");
+    emit statusMessage(QString("Save file ..%1..").arg(basefilestart)); ////
     QApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
     
     Refresh_Source();
+    //// move image from cache!!!
     const QString goextern = html.replace(QString("src=\"%1").arg(imagecache),"src=\"./",Qt::CaseInsensitive);
     QApplication::restoreOverrideCursor();
     
@@ -140,7 +145,7 @@ void Base_Edit::set_Cache( const QString path )
 void  Base_Edit::OpenNewDoc() 
 {
     QString im, argument;
-    im = QFileDialog::getOpenFileName(this,tr("Select a xhtml file to edit "),"","XHTML (*.xhtml *.html)");
+    im = QFileDialog::getOpenFileName(this,tr("Select a xhtml file to edit "),"","XHTML (*.xhtml *.html *.htm)");
     if ( im.size()  > 0 ) {
     SetFileBase(im);
     }
@@ -166,8 +171,8 @@ void  Base_Edit::SetFileBase( QString file  )
          }
         
         
-         const QString goextern = externhtml.replace("src=\"./",QString("src=\"%1").arg(dirfromfile),Qt::CaseInsensitive);
-        fwriteutf8(file,goextern);
+         //// const QString goextern = externhtml.replace("src=\"./",QString("src=\"%1").arg(dirfromfile),Qt::CaseInsensitive);
+         //// fwriteutf8(file,goextern);
         /* fix image path */
         
         QFileInfo fix(file);
@@ -183,7 +188,7 @@ void  Base_Edit::SetFileBase( QString file  )
     basefilepath = baseref;
     basefilestart = absolutefilepath;
     
-    //////////////////qDebug() << "#### aprifile html  ->" << basefilestart;
+    qDebug() << "#### aprifile html  ->" << basefilestart;
     
     set_XHTML(fopenutf8(basefilestart));
     
@@ -693,7 +698,7 @@ void Base_Edit::Reload_Editor()
 	Refresh_Source();
     Load_Xhtml();
     if (!lastcursor.isNull()) {
-    ////////////wtext->setTextCursor(lastcursor);
+    wtext->setTextCursor(lastcursor);
     }
 
     }
