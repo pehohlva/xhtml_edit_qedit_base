@@ -11,7 +11,7 @@ LANGUAGE	= C++
 DEFINES += NDEBUG THREAD_SAFE=1 TEMP_STORE=2
 
 DESTDIR	= ../all_os_libs/
-TARGET	= tidy
+OBJECTS_DIR = ../all_os_libs/build
 
 QT += xml
 CONFIG += c++11 release QMAKE_CXXFLAGS_WARN_ON=-w QMAKE_CFLAGS_WARN_ON=-w
