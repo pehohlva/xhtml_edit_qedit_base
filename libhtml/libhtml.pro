@@ -5,6 +5,7 @@
 DEPENDPATH += . include
 INCLUDEPATH += . include
 TEMPLATE	=lib
+TARGET	= tidy
 CONFIG   += qt warn_off release staticlib
 LANGUAGE	= C++
 #DEFINES -= UNICODE
