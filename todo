@@ -1,0 +1,61 @@
+
+- append info.plist to drag file on icon
+- import file doc odt docx & transform to html
+  info https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/textutil.1.html
+   only mac...
+   on linux https://www.gnu.org/software/unrtf/
+
+  -cat fmt      Read the specified files, concatenate them, and write the result out as a single file in
+                   the indicated format.
+
+                   fmt is one of:  txt, html, rtf, rtfd, doc, docx, wordml, odt, or webarchive
+
+
+from my code https://github.com/pehohlva/DocSpeacker/blob/master/src/st_lib/zipdoc.h
+void ZipDoc::handler_txtutils( const QString file ) {
+     //// converter = /usr/bin/textutil /// only mac or linux liboffice libre office or so,,,
+     if (converter.size() < 4) {
+       text_s = QString("textutil -convert .. unable to read! or not mac osx.");
+     }
+    //// ram->LoadFile(file);
+    //// const QByteArray base = ram->stream();
+    QProcess *process = new QProcess(NULL);
+    process->setReadChannelMode(QProcess::MergedChannels);
+    process->start(converter,  QStringList() << "-convert" << "txt" << file << "-stdout", QIODevice::ReadOnly );
+      if (!process->waitForFinished()) {
+           text_s = QString("Unable to read!.");
+      } else {
+           text_s = process->readAll();
+      }
+
+        ///// qDebug() << "### text_s " << text_s;
+}
+
+
+
+extern inline QString run_which( QString apps = QString("gs") )
+{
+    QStringList potential_paths;
+    potential_paths.append("/usr/bin");
+    potential_paths.append("/usr/local/bin");
+    potential_paths.append("/sw/bin");   /* to use on mac as same */
+    potential_paths.append("/opt/bin");
+    QProcess *process = new QProcess(NULL);
+    process->setReadChannelMode(QProcess::MergedChannels);
+    QStringList env = process->systemEnvironment();
+    env.replaceInStrings(QRegExp("^PATH=(.*)", Qt::CaseInsensitive), "PATH=\\1;"+potential_paths.join(";"));
+    process->setEnvironment(env);
+
+        process->start( QString("which") ,  QStringList() << apps , QIODevice::ReadOnly );
+          if (!process->waitForFinished()) {
+          return QString();
+          } else {
+              QString finder = process->readAll().trimmed();
+              if (finder.endsWith(apps,Qt::CaseInsensitive)) {
+                 qDebug() << "### finder " <<  finder;
+                return finder;
+              } else {
+                return QString();
+              }
+          }
+}

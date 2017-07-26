@@ -3,7 +3,7 @@
 ######################################################################
 
 TEMPLATE = app
-TARGET = edithtml
+TARGET = XHTML_Editor
 DESTDIR	+= ../
 DEPENDPATH += .
 INCLUDEPATH += .

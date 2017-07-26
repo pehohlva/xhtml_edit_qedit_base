@@ -4,14 +4,14 @@
 
 
 #define WEBAGENTNAME "Google"
-#define _PROGRAM_NAME_ QString("XHTML di Peter Hohl")
-#define _PROGRAM_NAME_DOMAINE_ QString("ciz.ch")
+#define _PROGRAM_NAME_ QString("XHTML di Peter H.")
+#define _PROGRAM_NAME_DOMAINE_ QString("qt.io")
 #define _ORGANIZATION_NAME_ QString("PPK-Screendesign/Webprogramm")
-#define _PROGRAM_VERSION_ QString("version 3.8 / go git")
-#define _PROGRAM_OWNER_ QString("version 3.8")
-#define _PROGRAM_TITLE_ QString("XHTML Editor version 3.8")
+#define _PROGRAM_VERSION_ QString("version 3.9.1 / go git")
+#define _PROGRAM_OWNER_ QString("version 3.9.1")
+#define _PROGRAM_TITLE_ QString("XHTML Editor version 3.9")
 #define Q_WORKS_PEND QString("open")
-#define _PROGRAM_SHORT_NAME QString("qt_xhtmledit")
+#define _PROGRAM_SHORT_NAME QString("xhtmledit")
 #define _WATERMARK_ QString("www.pulitzer.ch")
 #define TUMNAIL_SIZE 120
 #define PICS_SIZE_LIMIT 740
