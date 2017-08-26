@@ -10,7 +10,6 @@
 #ifndef XXINTERFACE_H
 #define XXINTERFACE_H
 
-#include <QVariant>
 #include <QAction>
 #include <QApplication>
 #include <QButtonGroup>
@@ -21,67 +20,64 @@
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QPushButton>
+#include <QScrollArea>
+#include <QScrollBar>
 #include <QSlider>
 #include <QSpinBox>
 #include <QVBoxLayout>
+#include <QVariant>
 #include <QWidget>
-#include <QScrollArea>
-#include <QScrollBar>
 
-class Ui_Interface
-{
+class Ui_Interface {
 public:
-    QGridLayout *gridLayout;
-    QScrollArea *scrolla;
-    QGroupBox *groupBox_2;
-    QGridLayout *gridLayout1;
-    QLabel *label_7;
-    QLabel *imgcoo;
-    QLabel *imginfo;
-    QGroupBox *groupBox;
-    QGridLayout *gridLayout2;
-    QHBoxLayout *hboxLayout;
-    QVBoxLayout *vboxLayout;
-    QHBoxLayout *hboxLayout1;
-    QLabel *label;
-    QSpinBox *spinBox_3;
-    QSlider *horizontalSlider;
-    QHBoxLayout *hboxLayout2;
-    QLabel *label_3;
-    QSpinBox *spinBox;
-    QSlider *horizontalSlider_2;
-    QHBoxLayout *hboxLayout3;
-    QLabel *label_2;
-    QSpinBox *spinBox_2;
-    QSlider *horizontalSlider_3;
-    QVBoxLayout *vboxLayout1;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
-    QHBoxLayout *hboxLayout4;
-    QLabel *label_8;
-    QSpinBox *qualvalue;
-    QHBoxLayout *hboxLayout5;
-    QLabel *label_4;
-    QComboBox *comboBox_2;
-    QHBoxLayout *hboxLayout6;
-    QLabel *label_5;
-    QComboBox *comboBox;
-    QHBoxLayout *hboxLayout7;
-    QLabel *label_6;
-    QSpinBox *spinBox_4;
+  QGridLayout *gridLayout;
+  QScrollArea *scrolla;
+  QGroupBox *groupBox_2;
+  QGridLayout *gridLayout1;
+  QLabel *label_7;
+  QLabel *imgcoo;
+  QLabel *imginfo;
+  QGroupBox *groupBox;
+  QGridLayout *gridLayout2;
+  QHBoxLayout *hboxLayout;
+  QVBoxLayout *vboxLayout;
+  QHBoxLayout *hboxLayout1;
+  QLabel *label;
+  QSpinBox *spinBox_3;
+  QSlider *horizontalSlider;
+  QHBoxLayout *hboxLayout2;
+  QLabel *label_3;
+  QSpinBox *spinBox;
+  QSlider *horizontalSlider_2;
+  QHBoxLayout *hboxLayout3;
+  QLabel *label_2;
+  QSpinBox *spinBox_2;
+  QSlider *horizontalSlider_3;
+  QVBoxLayout *vboxLayout1;
+  QPushButton *pushButton;
+  QPushButton *pushButton_2;
+  QHBoxLayout *hboxLayout4;
+  QLabel *label_8;
+  QSpinBox *qualvalue;
+  QHBoxLayout *hboxLayout5;
+  QLabel *label_4;
+  QComboBox *comboBox_2;
+  QHBoxLayout *hboxLayout6;
+  QLabel *label_5;
+  QComboBox *comboBox;
+  QHBoxLayout *hboxLayout7;
+  QLabel *label_6;
+  QSpinBox *spinBox_4;
 
-    void setupUi(QDialog *Interface)
-    {
+  void setupUi(QDialog *Interface) {
     Interface->setObjectName(QString::fromUtf8("Interface"));
     gridLayout = new QGridLayout(Interface);
     gridLayout->setSpacing(6);
     gridLayout->setMargin(9);
     gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        
-        
-        
+
     scrolla = new QScrollArea(Interface);
-    scrolla->setWidgetResizable (true);
+    scrolla->setWidgetResizable(true);
     scrolla->setMinimumSize(QSize(0, 300));
 
     gridLayout->addWidget(scrolla, 2, 0, 1, 1);
@@ -110,7 +106,6 @@ public:
     imginfo->setTextFormat(Qt::PlainText);
 
     gridLayout1->addWidget(imginfo, 2, 0, 1, 2);
-
 
     gridLayout->addWidget(groupBox_2, 1, 0, 1, 1);
 
@@ -155,7 +150,6 @@ public:
 
     hboxLayout1->addWidget(horizontalSlider);
 
-
     vboxLayout->addLayout(hboxLayout1);
 
     hboxLayout2 = new QHBoxLayout();
@@ -181,7 +175,6 @@ public:
     horizontalSlider_2->setTickPosition(QSlider::TicksAbove);
 
     hboxLayout2->addWidget(horizontalSlider_2);
-
 
     vboxLayout->addLayout(hboxLayout2);
 
@@ -209,9 +202,7 @@ public:
 
     hboxLayout3->addWidget(horizontalSlider_3);
 
-
     vboxLayout->addLayout(hboxLayout3);
-
 
     hboxLayout->addLayout(vboxLayout);
 
@@ -247,7 +238,6 @@ public:
 
     hboxLayout4->addWidget(qualvalue);
 
-
     vboxLayout1->addLayout(hboxLayout4);
 
     hboxLayout5 = new QHBoxLayout();
@@ -263,7 +253,6 @@ public:
     comboBox_2->setObjectName(QString::fromUtf8("comboBox_2"));
 
     hboxLayout5->addWidget(comboBox_2);
-
 
     vboxLayout1->addLayout(hboxLayout5);
 
@@ -281,7 +270,6 @@ public:
     comboBox->setObjectName(QString::fromUtf8("comboBox"));
 
     hboxLayout6->addWidget(comboBox);
-
 
     vboxLayout1->addLayout(hboxLayout6);
 
@@ -301,18 +289,13 @@ public:
 
     hboxLayout7->addWidget(spinBox_4);
 
-
     vboxLayout1->addLayout(hboxLayout7);
-
 
     hboxLayout->addLayout(vboxLayout1);
 
-
     gridLayout2->addLayout(hboxLayout, 0, 0, 1, 1);
 
-
     gridLayout->addWidget(groupBox, 0, 0, 1, 1);
-
 
     retranslateUi(Interface);
 
@@ -320,40 +303,51 @@ public:
     size = size.expandedTo(Interface->minimumSizeHint());
     Interface->resize(size);
 
-    QObject::connect(horizontalSlider, SIGNAL(sliderMoved(int)), spinBox_3, SLOT(setValue(int)));
-    QObject::connect(horizontalSlider_2, SIGNAL(sliderMoved(int)), spinBox, SLOT(setValue(int)));
-    QObject::connect(horizontalSlider_3, SIGNAL(sliderMoved(int)), spinBox_2, SLOT(setValue(int)));
-    QObject::connect(spinBox_3, SIGNAL(valueChanged(int)), horizontalSlider, SLOT(setValue(int)));
-    QObject::connect(spinBox, SIGNAL(valueChanged(int)), horizontalSlider_2, SLOT(setValue(int)));
-    QObject::connect(spinBox_2, SIGNAL(valueChanged(int)), horizontalSlider_3, SLOT(setValue(int)));
+    QObject::connect(horizontalSlider, SIGNAL(sliderMoved(int)), spinBox_3,
+                     SLOT(setValue(int)));
+    QObject::connect(horizontalSlider_2, SIGNAL(sliderMoved(int)), spinBox,
+                     SLOT(setValue(int)));
+    QObject::connect(horizontalSlider_3, SIGNAL(sliderMoved(int)), spinBox_2,
+                     SLOT(setValue(int)));
+    QObject::connect(spinBox_3, SIGNAL(valueChanged(int)), horizontalSlider,
+                     SLOT(setValue(int)));
+    QObject::connect(spinBox, SIGNAL(valueChanged(int)), horizontalSlider_2,
+                     SLOT(setValue(int)));
+    QObject::connect(spinBox_2, SIGNAL(valueChanged(int)), horizontalSlider_3,
+                     SLOT(setValue(int)));
 
     QMetaObject::connectSlotsByName(Interface);
-    } // setupUi
+  } // setupUi
 
-    void retranslateUi(QDialog *Interface)
-    {
-    Interface->setWindowTitle(QApplication::translate("Interface", "Dialog", 0, 0));
-    groupBox_2->setTitle(QApplication::translate("Interface", "Image info", 0, 0));
-    label_7->setText(QApplication::translate("Interface", "Crop coordinate", 0, 0));
+  void retranslateUi(QDialog *Interface) {
+    Interface->setWindowTitle(
+        QApplication::translate("Interface", "Dialog", 0, 0));
+    groupBox_2->setTitle(
+        QApplication::translate("Interface", "Image info", 0, 0));
+    label_7->setText(
+        QApplication::translate("Interface", "Crop coordinate", 0, 0));
     imgcoo->setText(QApplication::translate("Interface", "....", 0, 0));
     imginfo->setText(QApplication::translate("Interface", "...", 0, 0));
-    groupBox->setTitle(QApplication::translate("Interface", "Image manipulation", 0, 0));
+    groupBox->setTitle(
+        QApplication::translate("Interface", "Image manipulation", 0, 0));
     label->setText(QApplication::translate("Interface", "Zoom:", 0, 0));
     label_3->setText(QApplication::translate("Interface", "Width:", 0, 0));
     label_2->setText(QApplication::translate("Interface", "Height:", 0, 0));
     pushButton->setText(QApplication::translate("Interface", "Save", 0, 0));
     pushButton_2->setText(QApplication::translate("Interface", "Crop", 0, 0));
-    label_8->setText(QApplication::translate("Interface", "Quality on Save:", 0, 0));
-    label_4->setText(QApplication::translate("Interface", "Filter apply:", 0, 0));
-    label_5->setText(QApplication::translate("Interface", "Color selector:", 0, 0));
+    label_8->setText(
+        QApplication::translate("Interface", "Quality on Save:", 0, 0));
+    label_4->setText(
+        QApplication::translate("Interface", "Filter apply:", 0, 0));
+    label_5->setText(
+        QApplication::translate("Interface", "Color selector:", 0, 0));
     label_6->setText(QApplication::translate("Interface", "Rotate:", 0, 0));
     Q_UNUSED(Interface);
-    } // retranslateUi
-
+  } // retranslateUi
 };
 
 namespace Ui {
-    class Interface: public Ui_Interface {};
+class Interface : public Ui_Interface {};
 } // namespace Ui
 
 #endif // XXINTERFACE_H
